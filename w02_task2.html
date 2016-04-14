@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>w02_task2</title>
+</head>
+<body>
+
+Enter point1's position<br>
+  <form name="form1">
+    <input type="text" name="x1" value="">
+    <input type="text" name="y1" value="">
+    <input type="text" name="z1" value=""> 
+  </form> 
+  
+Enter point2's position<br>
+  <form name="form2">
+    <input type="text" name="x2" value="">
+    <input type="text" name="y2" value="">
+    <input type="text" name="z2" value="">
+  </form> 
+
+Enter point3's position<br>
+  <form name="form3">
+    <input type="text" name="x3" value="">
+    <input type="text" name="y3" value="">
+    <input type="text" name="z3" value="">
+  </form>   
+
+<input type="button" value = "caluculate" onclick ="cal()"/>
+  
+  <script src = "Vec3.js"></script>
+  <script>
+
+ function cal(){ 
+  var x1,x2,x3,y1,y2,y3,z1,z2,z3;
+
+    x1=document.form1.x1.value;
+    y1=document.form1.y1.value;
+    z1=document.form1.z1.value;
+
+    x2=document.form2.x2.value;
+    y2=document.form2.y2.value;
+    z2=document.form2.z2.value;
+ 
+    x3=document.form3.x3.value;
+    y3=document.form3.y3.value;
+    z3=document.form3.z3.value;
+  
+    var A = new Vec3(x2-x1,y2-y1,z2-z1);
+    var B = new Vec3(x3-x1,y3-y1,z3-z1);
+    var g = new Vec3(A.y*B.z-A.z*B.y,A.z*B.x-A.x*B.z,A.x*B.y-A.y*B.x);
+    var  s= Math.sqrt(g.x*g.x+g.y*g.y+g.z*g.z)/2;
+    document.write(s);
+  }  
+  </script>
+  
+</body>
+</html>
