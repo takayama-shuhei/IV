@@ -6,8 +6,8 @@ function onClick () {
     }
 
     var x = document.form.x.value,
-        y = document.form.x.value,
-        z = document.form.x.value;
+        y = document.form.y.value,
+        z = document.form.z.value;
     var point = new Vec3(x, y, z);
     vectors.push(point);
 
