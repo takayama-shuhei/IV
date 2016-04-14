@@ -3,7 +3,7 @@ Vec3=function(x,y,z)
   this.x=x;
   this.y=y;
   this.z=z;
-}
+};
 
 Vec3.prototype.add = function(v)
 {
@@ -12,12 +12,12 @@ Vec3.prototype.add = function(v)
   this.z+=v.z;
 
   return this;
-}
+};
 
 Vec3.prototype.sum=function()
 {
   return this.x + this.y + this.z;
-}
+};
 
 Vec3.prototype.min=function()
 {
@@ -43,7 +43,7 @@ Vec3.prototype.min=function()
      return this.y
    }
  }
-}
+};
 
 
 Vec3.prototype.mid=function()
@@ -62,8 +62,7 @@ Vec3.prototype.mid=function()
  {
    return z;
  }
-}
-
+};
 
 Vec3.prototype.max=function()
 {
@@ -90,6 +89,8 @@ Vec3.prototype.max=function()
    }
 
  }
+};
 
-
-}
+Vec3.prototype.toString = function () {
+  return '(' + this.x + ', ' + this.y + ', ' + this.z + ')';
+};
